@@ -1,15 +1,13 @@
 
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
-
-
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom"
-
+//git 확인용
 function App() {
   return (
  <Router>
