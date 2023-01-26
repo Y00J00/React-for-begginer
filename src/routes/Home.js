@@ -1,5 +1,7 @@
 import {useState, useEffect} from "react";
 import Movie from "../components/Movies";
+import styles from "./Home.module.css";
+
 // function Home() {
 //   return <h1>home</h1>
 // }
@@ -25,19 +27,24 @@ function Home() {
     // })}, [])
     console.log(movies);
     return (
-      <div>
-      {loading ? <h1>loading...</h1> : null}
+      <div  className={styles.container}>
+      <div  className={styles.loader}>
+        {loading ? <h1>loading...</h1> : null}
+      </div>
       <ul>
-        {movies.map(movie => (
-          <Movie
-            key={movie.id}
-            id={movie.id}
-            medium_cover_image={movie.medium_cover_image}
-            title={movie.title}
-            summary={movie.summary}
-            genres={movie.genres}
-          />
-        ))}
+        <div  className={styles.movies}>
+          {movies.map(movie => (
+            <Movie
+              key={movie.id}
+              id={movie.id}
+              medium_cover_image={movie.medium_cover_image}
+              title={movie.title}
+              summary={movie.summary}
+              genres={movie.genres}
+              year={movie.year}
+            />
+          ))}
+        </div> 
       </ul>
       </div>);
   }

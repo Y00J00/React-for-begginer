@@ -31,6 +31,8 @@ function Detail() {
                 title={movie.title}
                 summary={movie.summary}
                 genres={movie.genres}
+                year={movie.year}
+
             />
         </ul>
         </div>);
