@@ -4,17 +4,15 @@ import Detail from "./routes/Detail";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom"
-//git 확인용
-//하 몰까낭
-// git 확인용 두번째 
+
+//parameter 앞에 : 꼭써주기 <Route path="/movie/:id">
 function App() {
   return (
  <Router>
   <Switch>
-    <Route path="/movie">
+    <Route path="/movie/:id">
       <Detail/>
     </Route>
     <Route path="/">
